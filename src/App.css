@@ -1,28 +1,103 @@
-/* src/App.css */
+/* Homepage Styles */
 .homepage {
   font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #fff9e6; /* Faint yellow background color */
   padding: 20px;
 }
 
-header {
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff4cc;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.amenities {
-  margin: 20px 0;
+.slide {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  transition-duration: 1s ease;
 }
 
-.amenities ul {
-  list-style-type: none;
-  padding: 0;
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.02);
 }
 
-.amenities li {
-  margin: 10px 0;
+.service-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.service-img {
+  width: 400px; /* Full image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-info-container {
+  text-align: left; /* Align text to the left */
+}
+
+.service-title {
+  font-size: 22px;
   font-weight: bold;
+  color: #333;
+}
+
+.service-info {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Hover effect for slight zoom */
+.service-item:hover .service-img {
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Arrows */
+.left-arrow, .right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Appointment Section */
+.appointment {
+  margin-top: 40px;
 }
 
 .appointment-buttons button {
