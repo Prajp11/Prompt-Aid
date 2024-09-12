@@ -114,3 +114,79 @@
 .appointment-buttons button:hover {
   background-color: #218838;
 }
+
+
+
+/* Footer */
+.footer {
+  background-color: #fff4cc;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #ddd;
+  color: #333;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  padding: 0 10px;
+}
+
+/* Left Section: Address and Appointment Desk */
+.footer-left h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  margin-bottom: 10px;
+}
+
+/* Center Section: Visiting Hours */
+.footer-center {
+  text-align: center;
+}
+
+.footer-center h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer-center p {
+  margin-bottom: 8px;
+}
+
+/* Right Section: Call Info and Quick Links */
+.footer-right {
+  text-align: right;
+}
+
+.footer-contact {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-contact svg {
+  margin-right: 8px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+
