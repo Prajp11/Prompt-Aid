@@ -115,8 +115,6 @@
   background-color: #218838;
 }
 
-
-
 /* Footer */
 .footer {
   background-color: #fff4cc;
@@ -188,5 +186,15 @@
 .footer-links ul li a:hover {
   text-decoration: underline;
 }
+
+/* Typewriter effect styles */
+.typewriter-effect {
+  font-size: 24px;
+  color: #007bff;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 
