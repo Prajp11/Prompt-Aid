@@ -1,6 +1,6 @@
 // src/components/Homepage.jsx
 import React, { useState } from 'react';
-import '../App.css'; // Correct path for App.css
+import '../App.css'; 
 import Type from "./Type"; 
 import ambulance from '../Images/ambulance.jpg';
 import emergency from '../Images/Emergency.jpg';
@@ -32,11 +32,10 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <header>
-      <h1>Welcome to Our Hospital</h1>
-      <Type />
-      <p>Providing quality healthcare services with compassion and care.</p>
-
+      <header className="homepage-header">
+        <h1>Welcome to Our Hospital</h1>
+        <Type />
+        <p>Providing quality healthcare services with compassion and care.</p>
       </header>
 
       <section className="slider-container">

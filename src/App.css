@@ -3,7 +3,19 @@
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #fff9e6; /* Faint yellow background color */
-  padding: 20px;
+  padding: 90px 20px 20px; /* Top padding adjusted to avoid overlap */
+}
+
+
+/* Homepage Header */
+.homepage-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.homepage-header p {
+  font-size: 18px;
+  color: #666;
 }
 
 /* Slider container */
@@ -194,6 +206,156 @@
   margin: 15px 0;
   font-weight: bold;
   text-align: center;
+}
+
+/* Navbar Styles */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 70px; /* Height of the navbar */
+  top: 0;
+  background-color: transparent;
+  transition: all 0.7s ease;
+}
+
+
+/* Background blur when scrolling */
+.blur {
+  background-color: #01111a8d;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Logo Styles */
+.Logo {
+  font-size: 32px;
+  letter-spacing: 2px;
+  padding-left: 7%;
+  color: #FF5F00; /* Match this color to your theme */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navbar Links */
+.NavbarLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 7%;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.NavbarLinks li {
+  padding: 2px 20px;
+  list-style-type: none;
+}
+
+.NavbarLinks a {
+  color: #FF5F00;  /* Same color for consistency */
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  padding: 2px 7px;
+  transition: color 0.3s;
+}
+
+.NavbarLinks a:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+/* Underline animation on hover */
+.NavbarLinks a::after {
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 5px;
+  bottom: 0;
+  width: 0px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.NavbarLinks a:hover:after {
+  width: 95%;
+}
+
+/* Hamburger Menu for Mobile */
+.Hamburger {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .Navbar {
+    width: 100%;
+  }
+
+  .NavbarLinks {
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    inset: 0 0 0 50%;
+    gap: 50px;
+    background-color: #0c2f69;
+    height: 100vh;
+    padding-top: max(20%, 120px);
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+
+  .showNavbar {
+    transform: translateX(0);
+  }
+
+  .Hamburger {
+    display: block;
+    z-index: 2;
+    padding: 5px;
+    padding-right: 7%;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    background-color: #e7e7e7;
+    border-radius: 50px;
+    height: 2.5px;
+    width: 30px;
+    margin: 6px;
+    transition: 0.5s;
+  }
+
+  .barOne {
+    rotate: -225deg;
+    position: relative;
+    top: 4px;
+    transition: 0.5s;
+  }
+
+  .barTwo {
+    display: none;
+  }
+
+  .barThree {
+    position: relative;
+    bottom: 4px;
+    rotate: 225deg;
+    transition: 0.5s;
+  }
 }
 
 
