@@ -6,16 +6,18 @@ import Homepage from "./components/Homepage";  // Use Homepage.jsx for home tab
 import About from "./components/About";        // Shared About component
 import Ambulance from "./components/Ambulance";
 import Services from "./components/Services";
+import Contact from "./components/Contact";    // Import Contact component
 
 function App() {
   return (
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Homepage />} />  {/* Home tab uses Homepage.jsx */}
-        <Route path="/about" element={<About />} />  {/* Shared About component */}
+        <Route path="/" element={<Homepage />} />   {/* Home tab uses Homepage.jsx */}
+        <Route path="/about" element={<About />} /> {/* Shared About component */}
         <Route path="/ambulance" element={<Ambulance />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} /> {/* Add Contact route */}
       </Routes>
       <Footer />
     </Router>
