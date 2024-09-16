@@ -436,4 +436,88 @@
   margin-top: 20px;
 }
 
+/* About Page Container */
+.about-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff9e6;  /* Light yellow background */
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About Header Section */
+.about-header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.hospital-icon {
+  font-size: 50px;
+  color: #007bff;  /* Primary color */
+  margin-bottom: 10px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-intro {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Vision and Mission Sections */
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.about-section div {
+  width: 45%;
+  background-color: #fff4cc;  /* Soft background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Icons for Vision and Mission */
+.icon {
+  font-size: 40px;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+/* Why Choose Us Section */
+.about-values {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-values h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-values p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
 
