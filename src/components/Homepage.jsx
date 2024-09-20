@@ -1,4 +1,3 @@
-// src/components/Homepage.jsx
 import React, { useState } from 'react';
 import '../App.css'; 
 import Type from "./Type"; 
@@ -8,6 +7,7 @@ import modernTools from '../Images/Moderntools.jpg';
 import medicines from '../Images/Medicines.jpg';
 import labs from '../Images/Labs.jpg';
 import anytimeServices from '../Images/Anytimeservices.jpg';
+import { useNavigate } from "react-router-dom";  // To navigate to another page
 
 const services = [
   { title: 'Anytime Services', img: anytimeServices, info: 'We offer round-the-clock healthcare services.' },
@@ -21,6 +21,7 @@ const services = [
 const Homepage = () => {
   const [current, setCurrent] = useState(0);
   const length = services.length;
+  const navigate = useNavigate();  // To navigate to a different page
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -28,6 +29,10 @@ const Homepage = () => {
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  const handleAppointmentClick = () => {
+    navigate("/appointment");  // Redirect to the appointment page
   };
 
   return (
@@ -59,11 +64,8 @@ const Homepage = () => {
       <section className="appointment">
         <h2>Book an OPD Appointment</h2>
         <div className="appointment-buttons">
-          <button onClick={() => alert("Redirecting to New Patient Registration")}>
-            New Patient
-          </button>
-          <button onClick={() => alert("Redirecting to Registered Patient Login")}>
-            Registered Patient
+          <button onClick={handleAppointmentClick}>
+            Book OPD Appointment
           </button>
         </div>
       </section>
