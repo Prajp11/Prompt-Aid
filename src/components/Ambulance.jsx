@@ -49,7 +49,7 @@ const ambulanceData = [
     name: "Veterinary Small",
     imgSrc: MFR,
     description: "Small veterinary ambulances for safe and secure transfer of animals, equipped with specialized handling equipment.",
-    equipment: [firstAid],
+    equipment: [firstAid, stretcher],
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const ambulanceData = [
     name: "Patient Transfer - AC",
     imgSrc: patientAmbu,
     description: "AC ambulances for patient transfer provide climate-controlled environments for enhanced patient comfort, especially in longer transfers.",
-    equipment: [firstAid, oxygen],
+    equipment: [firstAid, oxygen, stretcher],
   },
   {
     id: 8,
@@ -160,3 +160,4 @@ const Ambulance = () => {
 };
 
 export default Ambulance;
+

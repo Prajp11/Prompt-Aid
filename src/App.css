@@ -616,15 +616,15 @@
 
 .contact-number-overlay {
   position: absolute;
-  bottom: 10px; 
-  left: 45%; 
-  transform: translateX(-50%); 
+  bottom: 10px;
+  left: 45%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 5px 10px;
   border-radius: 3px;
   font-size: 19px;
-  width: fit-content; 
+  width: fit-content;
 }
 
 /* Information Section */
@@ -706,23 +706,32 @@
 }
 
 /* Two Block Structure - Side by Side */
-.ambulance-services {
+.ambulance-types-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align at the top */
+
   gap: 20px;
 }
 
+.ambulance-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  height: auto; /* Ensure blocks don't get too tall */
+ }
+
 /* Left Block - Services in Grid */
 .ambulance-left {
-  flex: 1;
+  flex: 1.5;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 services per row */
   gap: 15px;
-  padding: 20px;
+  padding: 15px;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .ambulance-logo-block {
@@ -730,19 +739,31 @@
   cursor: pointer;
   padding: 10px;
   transition: all 0.3s ease;
+  height: 120px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.ambulance-logo-block:hover {
+  border: 2px solid #007bff;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+  transform: translateY(-3px);
+  background-color: #e0f7fa;
 }
 
 .ambulance-logo-block img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
 }
 
 .ambulance-logo-block h3 {
   font-size: 14px;
-  color: #007bff;
+  color: #333;
+  margin-top: 5px ;
 }
 
 .ambulance-logo-block:hover {
@@ -752,15 +773,14 @@
 
 /* Right Block - Service Description */
 .ambulance-right {
-  flex: 2;
-  padding: 20px;
+  flex: 1;
+  padding: 15px;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  text-align: center;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
 }
 
 .ambulance-right h2 {
@@ -775,22 +795,12 @@
   margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .ambulance-services {
-    flex-direction: column;
-  }
-
-  .ambulance-left {
-    grid-template-columns: repeat(2, 1fr); /* 2 services per row on smaller screens */
-  }
-
-  .ambulance-right {
-    margin-left: 0;
-    margin-top: 20px;
-  }
+/* Reference Images */
+.reference-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
-
 
 .reference-img {
   width: 50px;
@@ -800,10 +810,15 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .ambulance-services {
+/* @media (max-width: 1024px) {
+  .ambulance-types-container {
     flex-direction: column;
-  }
+  } */
+
+  @media (max-width: 1024px) {
+    .ambulance-services {
+      flex-direction: column;
+    }
 
   .ambulance-left {
     grid-template-columns: repeat(2, 1fr); /* 2 services per row on smaller screens */
@@ -820,6 +835,7 @@
     grid-template-columns: repeat(1, 1fr); /* 1 service per row on mobile */
   }
 }
+
 
 
 
