@@ -8,7 +8,7 @@ const Appointment = () => {
   };
 
   return (
-    <div className="appointment-page"> {/* Add this class here */}
+    <div className="appointment-page"> 
       <div className="appointment-container">
         <h2>{isNewPatient ? "New Patient Registration" : "Patient Login"}</h2>
         <form>

@@ -520,25 +520,45 @@
   margin-top: 10px;
 }
 
-
 /* Scoped Appointment Page Container */
+.appointment-page {
+  background-image: url('./Images/loginpage.png'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Appointment Container with Opacity and Bigger Size */
 .appointment-page .appointment-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  max-width: 700px; /* Increased width */
+  padding: 30px; /* Increased padding */
+  background-color: rgba(255, 255, 255, 0.8); /* Added opacity */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow for a better effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for the container */
+.appointment-page .appointment-container:hover {
+  transform: scale(1.02); /* Slight scale-up on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
 .appointment-page .appointment-container h2 {
   text-align: center;
   color: #007bff;
   margin-bottom: 20px;
+  font-size: 28px; /* Increased font size */
 }
 
+/* Form Group Styles */
 .appointment-page .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .appointment-page .form-group label {
@@ -546,37 +566,46 @@
   margin-bottom: 8px;
   font-weight: bold;
   color: #333;
+  font-size: 18px; /* Larger label font size */
 }
 
+/* Input Styles with Hover and Focus Effects */
 .appointment-page .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Larger padding */
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .appointment-page .form-group input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Blue glow effect on focus */
   outline: none;
 }
 
+/* Submit Button with Hover Effect */
 .appointment-page button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   font-size: 18px;
   background-color: #007bff;
   color: white;
-  border: none;
+  border: 3px solid transparent; /* Transparent border */
+  border-image: linear-gradient(45deg, #ff6f00, #007bff) 1; /* Gradient border */
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  animation: rotate-border 4s linear infinite;
 }
 
 .appointment-page button:hover {
   background-color: #0056b3;
+  transform: translateY(-3px);
 }
 
 /* Toggle Button */
@@ -591,7 +620,9 @@
 
 .appointment-page .toggle-btn:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
+
 
 /* Ambulance Container */
 .ambulance-container {
