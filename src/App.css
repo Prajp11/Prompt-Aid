@@ -867,6 +867,63 @@
   }
 }
 
+/* FAQ Section Styles */
+.faq-section {
+  margin-top: 30px;
+}
+
+.faq-item {
+  background-color: #f4f4f4;  /* Neutral background */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, background-color 0.3s;  /* Smooth hover transitions */
+}
+
+.faq-item:hover {
+  background-color: #e2e8f0;  /* Light shade for hover effect */
+  transform: scale(1.02);  /* Slight scaling on hover */
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 1.2em;
+  color: #333;  /* Darker text for contrast */
+}
+
+.faq-question:hover h3 {
+  color: #5a5a5a;  /* Subtle hover effect on question text */
+}
+
+.faq-icon {
+  font-size: 1.2em;
+  color: #666;  /* Neutral color for icons */
+  transition: color 0.3s;  /* Smooth color transition */
+}
+
+.faq-icon:hover {
+  color: #888;  /* Lighter hover color for icons */
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #444;  /* Dark gray for better readability */
+  background-color: #fff;  /* Contrast with the answer text */
+  padding: 10px;
+  border-left: 4px solid #ccc;  /* Subtle border on the left */
+  border-radius: 5px;
+}
+
+.faq-answer:hover {
+  background-color: #f7fafc;  /* Soft hover effect on the answer block */
+}
 
 
 

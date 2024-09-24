@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaUser, FaPhoneAlt, FaEnvelope } from "react-icons/fa";  // Import icons
+import { FaUser, FaPhoneAlt, FaEnvelope, FaChevronUp, FaChevronDown } from "react-icons/fa";  
 import '../App.css'; 
 import AmbulanceImage from '../Images/AmbulanceServ.jpg'; 
 import patientAmbu from '../Images/AmbulanceImages/patient-ambu.png'; 
@@ -88,8 +88,36 @@ const ambulanceData = [
   },
 ];
 
+const faqData = [
+  {
+    question: "How can I call for an ambulance in Pune?",
+    answer: "To call an ambulance in Pune, you can call the government toll-free numbers 102 or 108 or book an ambulance online from our hospital. We will be at your doorstep within 15-20 minutes."
+  },
+  {
+    question: "How can I book an ambulance from the site?",
+    answer: "You can visit our website and contact us at +91-1234567890. Our executives will assist you in booking the necessary ambulance within a few seconds."
+  },
+  {
+    question: "When should I call for an ambulance?",
+    answer: "You should call an ambulance for the safe transfer of critically ill patients, immobility (e.g., fractures), pregnancy cases, or even life-support transport."
+  },
+  {
+    question: "What types of ambulances do you provide?",
+    answer: "We provide a range of ambulances, including Patient Transfer, Basic Life Support (BLS), Advance Life Support (ALS), and more."
+  },
+  {
+    question: "What are the charges for ambulance services?",
+    answer: "Charges vary based on the type of service. You can contact us directly to know the exact pricing for each type of ambulance."
+  }
+];
+
 const Ambulance = () => {
   const [selectedService, setSelectedService] = useState(ambulanceData[0]);  // Default selection
+  const [expandedFAQ, setExpandedFAQ] = useState(null);  // Track the expanded FAQ
+
+  const toggleFAQ = (index) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);  // Toggle between open and closed
+  };
 
   return (
     <div className="ambulance-container">
@@ -153,6 +181,20 @@ const Ambulance = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* FAQ Section */}
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div className="faq-section">
+          {faqData.map((faq, index) => (
+            <div key={index} className="faq-item">
+              <div className="faq-question" onClick={() => toggleFAQ(index)}>
+                <h3>{faq.question}</h3>
+                {expandedFAQ === index ? <FaChevronUp className="faq-icon" /> : <FaChevronDown className="faq-icon" />}
+              </div>
+              {expandedFAQ === index && <p className="faq-answer">{faq.answer}</p>}
+            </div>
+          ))}
         </div>
       </section>
     </div>
