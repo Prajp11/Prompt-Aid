@@ -925,6 +925,97 @@
   background-color: #f7fafc;  /* Soft hover effect on the answer block */
 }
 
+/* Service page container for the cards */
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 40px;
+  row-gap: 50px; /* Added gap between rows */
+  background-color: #f9f9f9;
+}
+
+/* Flip card wrapper */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 320px; /* Card size remains compact */
+  perspective: 1000px; /* To give the 3D effect */
+}
+
+/* Flip card inner */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s; /* Increased delay for smooth flipping */
+  transform-style: preserve-3d;
+}
+
+/* Flip card on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces of the card */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.flip-card-front {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #fff9e6; /* Faint yellow for flipped card */
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Image inside the card */
+.package-img {
+  width: 100%;
+  height: 200px; /* Set the image height to 200px as you wanted */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.flip-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.flip-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Additional Information & Price styling */
+.flip-card-back strong {
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.flip-card-back strong:nth-child(2) {
+  color: #28a745; /* Green for Additional Information */
+}
+
+.flip-card-back strong:nth-child(3) {
+  color: #ff5f00; /* Orange for Price */
+}
+
 
 
 
